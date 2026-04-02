@@ -1,4 +1,4 @@
-# How to make the Orbital Strike Cannon Nuke Shot with just command blocks!
+# How to make the Orbital Strike Cannon Nuke Shot with just command blocks
 
 Too lazy to build a huge Orbital Strike Cannon contraption just to blow up a village? This is the place for you! Just copy these commands into some command blocks and now you can make that librarian villager regret not giving you mending!
 
