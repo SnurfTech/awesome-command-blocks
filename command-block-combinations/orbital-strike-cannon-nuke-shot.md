@@ -2,6 +2,7 @@
 
 Too lazy to build a huge Orbital Strike Cannon contraption just to blow up a village? This is the place for you! Just copy these commands into some command blocks and now you can make that librarian villager regret not giving you mending!
 
+---
 Firstly, place an impulse (needs redstone) command block with this command:
 
 ```give @a fishing_rod[minecraft:item_name="Nuke Shot",minecraft:custom_data={nuke_shot:true}]```
