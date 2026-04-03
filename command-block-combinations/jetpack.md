@@ -10,21 +10,21 @@ Firstly, place an impulse (needs redstone) command block with this command:
 This command will give you the jetpack that you need to fly with. Place a button on the impulse command block and press it to receive your jetpack.
 
 ---
-Next, anywhere, place a repeating (always active) command block with this command:
+Next to that impulse command block, place a chain (always active) command block with this command:
 
 ```scoreboard objectives add jetpack minecraft.custom:minecraft.sneak_time```
 
-Optionally you could not do this and run this command in chat once and make the next chain command block a repeating command block instead, but I like to do this so I don't have to save the command elsewhere for if I want to have a jetpack in another world. It also satifies my OCD. What this command does is it makes it possible to detect whenever you are sneaking.
+Optionally you could not do this and run this command in chat once and skip placing this command block, but I like to do this so I don't have to save the command elsewhere for if I want to have a jetpack in another world. It also satifies my OCD. What this command does is it makes it possible to detect whenever you are sneaking.
 
 ---
-Next to the repeating command block from earlier, place a chain (always active) command block with this command:
+Next, anywhere, place a repeating (always active) command block with this command:
 
 ```execute as @a[scores={jetpack=1..},x_rotation=-90..80] if items entity @s armor.chest copper_chestplate[custom_data={is_jetpack:1b}] run effect give @s levitation 1 8 true```
 
 This command checks if you are sneaking, have the jetpack equipped, and are not facing down. If so, it will give you levitation so you start flying.
 
 ---
-Next to the chain command block from earlier, place another chain (always active) command block with this command:
+Next to the repeating command block from earlier, place a chain (always active) command block with this command:
 
 ```execute as @a[scores={jetpack=1..},x_rotation=81..90] if items entity @s armor.chest copper_chestplate[custom_data={is_jetpack:1b}] run effect give @s slow_falling 1 4 true```
 
