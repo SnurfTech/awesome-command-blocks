@@ -42,11 +42,11 @@ Next, place a row of always active command blocks and for each command in the li
 
 ```execute as @a if items entity @s weapon.* minecraft:golden_axe[custom_data={isMagicAxe:1b}] at @e[type=item, nbt={Item:{id:"minecraft:warped_stem"}}] run fill ~2 ~2 ~2 ~-2 ~-2 ~-2 air replace minecraft:warped_stem destroy```
 
-```execute as @a if items entity @s weapon.* minecraft:golden_axe[custom_data={isMagicAxe:1b}] at @e[type=item] run fill ~3 ~3 ~3 ~-3 ~-3 ~-3 air replace minecraft:warped_wart_block destroy```
+```execute as @a if items entity @s weapon.* minecraft:golden_axe[custom_data={isMagicAxe:1b}] at @e[type=item] run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 air replace minecraft:warped_wart_block destroy```
 
 ```execute as @a if items entity @s weapon.* minecraft:golden_axe[custom_data={isMagicAxe:1b}] at @e[type=item, nbt={Item:{id:"minecraft:crimson_stem"}}] run fill ~2 ~2 ~2 ~-2 ~-2 ~-2 air replace minecraft:crimson_stem destroy```
 
-```execute as @a if items entity @s weapon.* minecraft:golden_axe[custom_data={isMagicAxe:1b}] at @e[type=item] run fill ~3 ~3 ~3 ~-3 ~-3 ~-3 air replace minecraft:nether_wart_block destroy```
+```execute as @a if items entity @s weapon.* minecraft:golden_axe[custom_data={isMagicAxe:1b}] at @e[type=item] run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 air replace minecraft:nether_wart_block destroy```
 
 ```execute as @a if items entity @s weapon.* minecraft:golden_axe[custom_data={isMagicAxe:1b}] at @e[type=item, nbt={Item:{id:"minecraft:jungle_log"}}] run fill ~2 ~2 ~2 ~-2 ~-2 ~-2 air replace minecraft:jungle_log destroy```
 
