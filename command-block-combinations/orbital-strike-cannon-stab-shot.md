@@ -3,21 +3,21 @@
 Ever wanted that cool Orbital Strike Cannon Stab Shot fishing rod that pratically stabbed into the ground with tnt, destroying almost anything in its path? But you're too lazy to build a huge redstone contraption for that? Well you have come to the right place! Now you can recreate it with just command blocks!
 
 ---
-First, place down an impulse (needs redstone) command block containing this command:
+First, place down an impulse (needs redstone, unconditional) command block containing this command:
 
 ```give @p minecraft:fishing_rod[item_name="Stab Shot",custom_data={isStabShot:1b}]```
 
 Place a button on this command block and press it to give yourself the special fishing rod you will need to blow stuff up.
 
 ---
-Next, place down a repeating (always active) command block with this command:
+Next, place down a repeating (always active, unconditional) command block with this command:
 
 ```execute as @a if items entity @s weapon.* minecraft:fishing_rod[custom_data={isStabShot:1b}] run tag @e[type=minecraft:experience_orb] add b4```
 
 This command checks if you are holding the special fishing rod and gives all experience orbs the tag "b4" so that they won't be affected by any of the other command blocks.
 
 ---
-Next to that repeating command block, place a chain (always active) command block and then another next to that one and so on until you have one for every command in this list. Then place these commands one at a time in each command block. For each command in the list, I will say what it does below it.
+Next to that repeating command block, place a chain (always active, unconditional) command block and then another next to that one and so on until you have one for every command in this list. Then place these commands one at a time in each command block. For each command in the list, I will say what it does below it.
 
 ```execute as @a if items entity @s weapon.* minecraft:fishing_rod[custom_data={isStabShot:1b}] at @e[type=minecraft:fishing_bobber] at @p run summon minecraft:experience_orb```
 > This command checks if you are holding the special fishing rod and if you use it. If so, it will spawn an experience orb.
