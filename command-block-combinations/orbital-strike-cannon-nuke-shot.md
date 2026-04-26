@@ -5,14 +5,18 @@ Too lazy to build a huge Orbital Strike Cannon contraption just to blow up a vil
 ---
 Firstly, place an impulse (needs redstone, unconditional) command block with this command:
 
-```give @a fishing_rod[minecraft:item_name="Nuke Shot",minecraft:custom_data={nuke_shot:true}]```
+```
+give @a fishing_rod[minecraft:item_name="Nuke Shot",minecraft:custom_data={nuke_shot:true}]
+```
 
 Then place a button on this command block. This command block will give you the actual fishing rod that you will need to blow stuff up.
 
 ---
 Next to that, place a chain (always active, unconditional) command block next to that impulse command block with this command:
 
-```scoreboard objectives add use_nuke used:fishing_rod```
+```
+scoreboard objectives add use_nuke used:fishing_rod
+```
 
 As you may have noticed, this is a scoreboard command that adds a scoreboard. This will track for when you use a fishing rod so that the other command blocks know when to spawn tnt in the sky. But you don't actually need to put it into a chain command block. Instead, you could just put it into the chat and never need to run it again. However, my OCD wouldn't allow this and I also wanted to make it so I could easily copy the command blocks into another world if needed without needing to run some commands in chat again. This also helps make sure I don't forget the scoreboard command.
 
@@ -22,21 +26,27 @@ Now place a button on the impulse command block from earlier and press it. This 
 ---
 This doesn't need to be right next to the earlier command blocks, but for organization, I like to put it near them. Place a repeating (always active, unconditional) command block with this command:
 
-```execute as @a[scores={use_nuke=1..}] at @s if items entity @s weapon.mainhand minecraft:fishing_rod[minecraft:custom_data={nuke_shot:true}] run setblock ~ ~50 ~ minecraft:command_block{auto:1b}```
+```
+execute as @a[scores={use_nuke=1..}] at @s if items entity @s weapon.mainhand minecraft:fishing_rod[minecraft:custom_data={nuke_shot:true}] run setblock ~ ~50 ~ minecraft:command_block{auto:1b}
+```
 
 This command checks if you have used your fishing rod and places an (always active, unconditional) command block that will later be removed in the sky. This is the command block that spawns all of the tnt.
 
 ---
 Next to the repeating command block, place a chain (always active, unconditional) command block that contains this command:
 
-```execute as @a[scores={use_nuke=1..}] at @s if items entity @s weapon.mainhand minecraft:fishing_rod[minecraft:custom_data={nuke_shot:true}] run data modify block ~ ~50 ~ Command set from block <X> <Y> <Z> Command```
+```
+execute as @a[scores={use_nuke=1..}] at @s if items entity @s weapon.mainhand minecraft:fishing_rod[minecraft:custom_data={nuke_shot:true}] run data modify block ~ ~50 ~ Command set from block <X> <Y> <Z> Command
+```
 
 This command once again checks if you have used your fishing rod and extracts a command out of another command block that we will later place and write the coordinates of into this command block. This chain command block also puts the extracted command into the command block that the repeating command placed in the sky. Because it is always active, once it contains the extracted command, it will immediately run with that command.
 
 ---
 Next to that chain command block, place another chain (always active, unconditional) command block with this command:
 
-```scoreboard players set @a[scores={use_nuke=1..}] use_nuke 0```
+```
+scoreboard players set @a[scores={use_nuke=1..}] use_nuke 0
+```
 
 This command block resets the amount of times you have used your Nuke Shot fishing rod.
 
