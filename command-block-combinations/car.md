@@ -124,4 +124,4 @@ Next, place another chain (always active, unconditional) command block next to t
 This command will make the invisible horse unable to jump. This is because it would look very wierd if you saw your car jumping around.
 
 ---
-Now you can press the button that spawns the car to start driving and you can press the button that gets rid of it when you want to stop driving!
+Now you can press the button that spawns the car and (it may take a few tries) try to "ride" the invisible horse. If you can't find it, then it will always be at the front seat. So you basically want to try to "ride" the front seat of the car. Then you can press the button that gets rid of the car when you want to stop driving.
