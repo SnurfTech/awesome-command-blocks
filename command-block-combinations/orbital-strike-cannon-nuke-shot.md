@@ -15,7 +15,7 @@ Running this command will make it so the other command blocks can detect when yo
 Next, place an impulse (needs redstone, unconditional) command block with this command:
 
 ```
-give @a fishing_rod[minecraft:item_name="Nuke Shot",minecraft:custom_data={nuke_shot:true}]
+give @p fishing_rod[minecraft:item_name="Nuke Shot",minecraft:custom_data={nuke_shot:true}]
 ```
 
 Then place a button on this command block. Pressing the button will give you the special fishing rod that you will need to use to blow stuff up.
