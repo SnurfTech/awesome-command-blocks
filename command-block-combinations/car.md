@@ -1,6 +1,6 @@
 # How to make a car with just command blocks
 
-> Credits to Gecko72 for making the car block model. https://block-display.com/bd/2589/
+> Car block model used from [https://block-display.com/bd/2589/](https://block-display.com/bd/2589/). I am not affiliated with the creator of the block model in any way.
 
 Ever wanted to drive around in a car in Minecraft that wasn't just one of those incredibly slow redstone machines? Well now you can with just 17 command blocks!
 
