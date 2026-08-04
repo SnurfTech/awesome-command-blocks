@@ -56,3 +56,5 @@ summon falling_block ~ ~1 ~ {BlockState:{Name:redstone_block},Passengers:[{id:fa
 
 ---
 Now take your fishing rod out from earlier and start using your Nuke Shot!
+
+> To generate the super long command that spawns all the TNT, I used a Python script from a Reddit post. I sadly have forgotten the exact Reddit post, but this might have been the one: [https://www.reddit.com/r/MinecraftCommands/comments/1pkcww4/comment/ntp952k/](https://www.reddit.com/r/MinecraftCommands/comments/1pkcww4/comment/ntp952k/). Credits to whoever made the Python script. I am not affiliated with them in any way.
